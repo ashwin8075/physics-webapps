@@ -14,7 +14,7 @@ function setup() {
   origin = createVector(300, 0);
   theta = PI / 4;
   bob = createVector();
-  len = 200;
+  len = 150;
 }
 
 function draw() {
