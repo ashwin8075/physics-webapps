@@ -7,7 +7,7 @@ let bob;
 let len;
 let origin;
 let g = 9.8;
-let dt = 0.4; // this the assumed wait time between draw() calls
+let dt = 0.5; // this the assumed wait time between draw() calls
 
 function setup() {
   createCanvas(600, 600);
