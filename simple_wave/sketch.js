@@ -2,8 +2,8 @@
 // User can adjust frequency, wavelength, and amplitude
 
 // TODO:
-// - put names for sliders and show the values with units
-// - show rulers on x and y axes
+// - (d) put names for sliders and show the values with units
+// - (n) show rulers on x and y axes
 // - show the wave equation: y = sin(2 pi x / lamda − 2 pi t / T + phi)
 // - also show v = lambda / T with real-time value for v
 
@@ -18,7 +18,7 @@ let sliderFrequency;    // frequency slider
 let sliderAmplitude;    // amplitude slider
 
 function setup() {
-  createCanvas(600, 400);
+  createCanvas(600, 600);
 
   // Set initial values
   wavelength = 100;
@@ -28,21 +28,48 @@ function setup() {
   time_now = 0;
 
   // Create sliders for user input
+  //
+  // wavelength slider
   sliderWavelength = createSlider(150, 600, wavelength, 10);
   sliderWavelength.position(20, 20);
+  wavelengthBox = createInput();
+  wavelengthBox.position(180, 20);
+  wavelengthBox.size(50);
+  wavelengthBox.value(wavelength);
+  wavelengthName = createP('Wavelength');
+  wavelengthName.position(20, -10);
+  //
+  // frequency slider
   sliderFrequency = createSlider(0, 10, frequency, 0.1);
   sliderFrequency.position(20, 50);
+  frequencyBox = createInput();
+  frequencyBox.position(180, 50);
+  frequencyBox.size(50);
+  frequencyBox.value(frequency);
+  frequencyName = createP('Frequency');
+  frequencyName.position(20, 20);
+  //
+  // amplitude slider
   sliderAmplitude = createSlider(0, 100, amplitude, 1);
   sliderAmplitude.position(20, 80);
+  amplitudeBox = createInput();
+  amplitudeBox.position(180, 80);
+  amplitudeBox.size(50);
+  amplitudeBox.value(amplitude);
+  amplitudeName = createP('Amplitude');
+  amplitudeName.position(20, 50);
 }
 
 function draw() {
   background(220);
 
-  // Get user input from sliders
+  // Get user input
   wavelength = sliderWavelength.value();
+  wavelengthBox.value(wavelength);
   frequency = sliderFrequency.value();
+  frequencyBox.value(frequency);
   amplitude = sliderAmplitude.value();
+  amplitudeBox.value(amplitude);
 
   // Draw wave
   noFill();
