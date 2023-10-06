@@ -4,6 +4,8 @@
 // TODO:
 // - put names for sliders and show the values with units
 // - show rulers on x and y axes
+// - show the wave equation: y = sin(2 pi x / lamda − 2 pi t / T + phi)
+// - also show v = lambda / T with real-time value for v
 
 let wavelength;     // wavelength of wave
 let frequency;      // frequency of wave
