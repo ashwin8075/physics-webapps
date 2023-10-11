@@ -4,6 +4,7 @@
 // TODO:
 // - (d) put names for sliders and show the values with units
 // - (n) show rulers on x and y axes
+// - switch to an equation (and sliders) using wavelength, period
 // - show the wave equation: y = sin(2 pi x / lamda − 2 pi t / T + phi)
 // - also show v = lambda / T with real-time value for v
 
@@ -18,7 +19,11 @@ let sliderFrequency;    // frequency slider
 let sliderAmplitude;    // amplitude slider
 
 function setup() {
-  createCanvas(600, 600);
+  createCanvas(windowWidth*0.95, windowHeight*0.95);
+
+  // set simulation length units in terms of window dimensions
+  sim_1m_x = windowWidth / 100;
+  sim_1m_y = windowHeight / 100;
 
   // Set initial values
   wavelength = 100;
@@ -61,7 +66,29 @@ function setup() {
 }
 
 function draw() {
-  background(220);
+  background(250);
+
+  // draw length-scale bars
+  //
+  // draw x-axis scale bar
+  stroke(128, 0, 0);
+  strokeWeight(1);
+  scale_left_x = 3*sim_1m_x
+  scale_right_x = scale_left_x + 10*sim_1m_x
+  scale_y = windowHeight - 10*sim_1m_y
+  line(scale_left_x, scale_y, scale_right_x, scale_y);
+  line(scale_left_x, scale_y - 1*sim_1m_y, scale_left_x, scale_y + 1*sim_1m_y);
+  line(scale_right_x, scale_y - 1*sim_1m_y, scale_right_x, scale_y + 1*sim_1m_y);
+  text('10 m', scale_left_x + 2*sim_1m_x, scale_y + 2*sim_1m_y);
+  //
+  // draw y-axis scale bar
+  scale_x = 3*sim_1m_x
+  scale_top_y = windowHeight - 25*sim_1m_y
+  scale_bottom_y = scale_top_y + 10*sim_1m_y
+  line(scale_x, scale_top_y, scale_x, scale_bottom_y);
+  line(scale_x - 1*sim_1m_x, scale_top_y, scale_x + 1*sim_1m_x, scale_top_y);
+  line(scale_x - 1*sim_1m_x, scale_bottom_y, scale_x + 1*sim_1m_x, scale_bottom_y);
+  text('10 m', scale_x + 1*sim_1m_x, scale_top_y + 5*sim_1m_y);
 
   // Get user input
   wavelength = sliderWavelength.value();
@@ -83,4 +110,10 @@ function draw() {
 
   // Update time
   time_now += 0.01;
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth*0.95, windowHeight*0.95);
+  sim_1m_x = windowWidth / 100;
+  sim_1m_y = windowHeight / 100;
 }
