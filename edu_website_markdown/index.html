@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Static Webpage</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="content">
+    <!-- Content will be loaded here -->
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    const markdownContent = `
+# Welcome to my Simple Static Webpage
+
+This is a simple static webpage using Markdown for content. You can easily customize the content directly within the HTML file.
+
+## Features
+
+- Easy to use
+- Lightweight
+- Customizable
+
+Read more [here](./index2.html)
+
+Feel free to modify this page as per your needs.
+
+Happy coding!
+`;
+
+    const content = document.getElementById('content');
+    content.innerHTML = marked.parse(markdownContent);
+
+    // content.innerHTML = marked(markdownContent);
+  </script>
+</body>
+</html>
