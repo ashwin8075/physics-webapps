@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Static Webpage</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div id="content">
+    <!-- Content will be loaded here -->
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    const markdownContent = `
+[Back to index](./index.html)
+# Waves
+### *Waves*
+<strong>Amplitude:</strong>
+
+Amplitude is the maximum displacement of a particle from its equilibrium position in a wave. It measures the intensity or strength of the wave. Amplitude is usually denoted by "A" and is measured in units like meters (m) for mechanical waves or volts (V) for electromagnetic waves.
+
+<u>*Sound Waves and Music*</u>: In the context of sound waves, amplitude relates to the volume or loudness of a sound. Higher amplitudes produce louder sounds, and lower amplitudes result in softer sounds. When you adjust the volume on a stereo or TV, you are essentially changing the amplitude of the sound waves.
+
+<u>*Radio and Television Reception*</u>: In radio and television broadcasting, the (amplitude modulation or AM) carries information. Different amplitudes represent different signals, allowing us to tune in to different radio stations or TV channels.
+
+<u>*Seismic Waves and Earthquakes*</u>: Seismic waves generated during earthquakes have varying amplitudes. The larger the earthquake, the greater the amplitude of the seismic waves it produces. Amplitude measurements are used by seismologists to determine the intensity of earthquakes and assess their potential impact.
+
+<u>*Musical Instruments*</u>: When you pluck or strike a drum, the amplitude of the vibrations in the strings or the drumhead affects the intensity and richness of the sound produced. Musicians often manipulate the amplitude of vibrations to create different musical dynamics.
+
+<u>*Ocean tides or waves*</u>: The amplitude of ocean tides represents the difference in water level between high tide and low tide. Understanding tidal amplitudes is essential for activities like boating, fishing, and coastal planning.
+
+<u>*Electrical Signals and Electronics*</u>: In electronics, the amplitude of electrical signals is crucial. For example, in audio amplifiers, the amplitude of an input signal is boosted to produce a louder sound at the output.
+
+<u>*Medical Ultrasound*</u>: In medical imaging, such as ultrasound scans, the amplitude of sound waves reflected off tissues and organs is used to create images. The variations in amplitude help visualize structures inside the body.
+
+<u>*wing and Pendulum Motion*</u>: When you push a swing or observe the motion of a pendulum, the amplitude refers to the maximum height or angular displacement reached during each swing. Amplitude affects the motion's period and stability.
+
+Example 1: water wave has an amplitude of 0.15 meters. Calculate the maximum displacement of a water particle from its equilibrium position as the wave passes through it.
+    
+Solution:
+    The amplitude of a wave represents the maximum displacement of a particle from its equilibrium position as the wave passes through it. In this case, the given amplitude is 0.15 meters.
+    So, the maximum displacement of a water particle is also 0.15 meters. This means that as the water wave passes through the particle, it will move up and down from its equilibrium position, reaching a maximum height of 0.15 meters above and below the equilibrium point.
+    Conceptual practice 
+    For a water wave, if the maximum displacement of a water particle from its rest position is 0.2 meters, the amplitude (A) is 0.2 m.
+
+<strong>Frequency</strong>:
+
+Frequency is the number of complete oscillations or cycles of a wave that occur in one second. It is measured in hertz (Hz). Higher frequencies correspond to shorter time periods and vice versa.
+
+<u>*Alarm Clock*</u>: You set your alarm clock to wake you up at a specific time every morning. The alarm sound occurs with a regular frequency.
+
+<u>*Traffic Lights*</u>: Traffic lights change colors at regular intervals to control the flow of traffic. The red, yellow, and green lights have specific frequencies of change.
+
+<u>*Heartbeat*</u>: Your heart beats at a certain frequency, measured in beats per minute (BPM). A healthy adult typically has a resting heart rate of around 60 to 100 BPM.
+
+<u>*Radio Stations*</u>: When you tune in to a radio station, it broadcasts music or talk shows at a specific frequency on the radio wave spectrum.
+
+<u>*Pendulum Clock*</u>: A pendulum clock swings back and forth with a constant frequency, which determines the time.
+
+<u>*Water Faucet*</u>: When you turn on a water faucet, the water flows out at a certain rate or frequency, measured in liters per minute (LPM) or gallons per minute (GPM).
+
+<u>*Musical Instruments*</u>: Musical notes are produced at specific frequencies. For example, the middle C note on a piano vibrates at a frequency of 261.63 Hz.
+
+<u>*TV Remote Control*</u>: When you press a button on your TV remote, it emits an infrared signal at a particular frequency to control your television.
+
+<u>*Cell Phone Notifications*</u>: Your cell phone can be set to notify you with a vibration or sound at a certain frequency when you receive calls, messages, or alerts.
+
+<u>*Traffic on a Highway*</u>: Cars passing on a highway can be seen as a frequency if you measure how many vehicles pass a point in a given time, such as cars per minute.
+
+
+Example 2: If a tuning fork vibrates and completes 440 cycles in one second, the frequency (f) is 440 Hz.
+
+<strong>Wavelength</strong>:
+
+Wavelength is the distance between two consecutive points in a wave that are in phase (e.g., two wave crests or two wave troughs). It is usually denoted by the Greek letter lambda (λ) and is measured in units like meters (m).
+
+<u>*Light Bulbs*</u>: Different types of light bulbs emit light at various wavelengths. For example, incandescent bulbs produce warm white light, while LED bulbs can emit light at various wavelengths to create different colors.
+
+<u>*Television and Radio Signals*</u>: TV and radio signals travel as electromagnetic waves with specific wavelengths. Tuning your TV or radio to a specific channel allows you to receive signals at the corresponding wavelength.
+
+<u>*Microwaves*</u>: Microwave ovens use electromagnetic waves with a wavelength of about 12 centimeters (around 2.45 gigahertz) to heat and cook food.
+
+<u>*Cell Phone Signals*</u>: Cell phones communicate using radio waves with specific wavelengths. Your phone connects to cell towers that emit signals at particular wavelengths for data and voice communication.
+
+<u>*WiFi Networks*</u>: WiFi signals operate at various wavelengths in the radio frequency range. The specific frequency determines the speed and range of your wireless internet connection.
+
+<u>*Rainbows*</u>: Rainbows are formed when sunlight is refracted and dispersed by raindrops in the atmosphere. Each color in a rainbow corresponds to a different wavelength of light.
+
+<u>*Musical Instruments*</u>: Musical instruments produce sound waves with various wavelengths. For example, a long string on a guitar produces lower-pitched notes with longer wavelengths, while a short string produces higher-pitched notes with shorter wavelengths.
+
+<u>*X-ray Imaging*</u>: In medical imaging, X-rays are used to create images of the inside of the body. Different tissues absorb X-rays differently due to their varying densities, allowing for visualization of internal structures.
+
+<u>*Ultrasound Imaging*</u>: Ultrasound uses high-frequency sound waves with specific wavelengths to create images of internal organs during medical examinations, such as pregnancy ultrasounds.
+
+<u>*Ocean Waves*</u>: Ocean waves have wavelengths that vary based on factors like wind speed and the depth of the water. Longer wavelengths result in larger waves, while shorter wavelengths create smaller waves.
+
+
+Example 3: In a light wave, if the distance between two consecutive wave crests is 500 nanometers (nm), the wavelength (λ) is 500 nm.
+
+
+<strong>Time Period</strong>:
+
+The time period of a wave is the time it takes for one complete cycle to occur. It is the reciprocal of frequency and is measured in seconds (s).
+
+<u>*Traffic Light Cycles*</u>: The time period for a traffic light cycle includes the duration of the green, yellow, and red lights at an intersection. These time periods regulate the flow of traffic.
+
+<u>*Clock Hands*</u>: The time period of a clock's second hand is one minute, while the minute hand has a time period of one hour, and the hour hand has a time period of 12 hours.
+
+<u>*Class Periods*</u>: In schools and universities, classes are typically divided into time periods, such as 45 minutes or one hour, with breaks in between.
+
+<u>*Work Shifts*</u>: Many jobs have defined time periods for work shifts, such as an eight-hour workday or a night shift that lasts for a specific number of hours.
+
+<u>*Bus Schedules*</u>: Public transportation systems operate on schedules that specify the time periods when buses or trains arrive and depart from stations.
+
+<u>*Recurring Meetings*</u>: In a professional setting, teams often schedule recurring meetings for a specific time period, such as a weekly one-hour team meeting.
+
+<u>*Sports Games*</u>: Sporting events have defined time periods, such as halves or quarters, which determine the duration of the game and its individual segments.
+
+<u>*Cooking Times*</u>: When preparing food, recipes often specify cooking times, like baking a cake for 30 minutes.
+
+<u>*Movie Showtimes*</u>: Movie theaters offer films at specific showtimes, with each screening having its own time period during which the movie is played.
+
+<u>*Library Borrowing Periods*</u>: When borrowing books from a library, you are typically given a time period, such as two weeks, during which you can keep the book before returning it.
+
+
+Example 4: If the time period (T) of a wave is 0.02 seconds, then its frequency (f) is 1 / 0.02 = 50 Hz.
+
+<strong>*Now, Will let you solve some examples for these concepts*:</strong>
+
+Amplitude Example:
+1) A sound wave has an amplitude of 0.3 meters. Find the maximum displacement of particles from the equilibrium position. 
+2) A seismic wave has an amplitude of 2 millimetres (mm). Convert this amplitude to meters.
+
+Frequency Example:
+1) An electromagnetic wave has a frequency of 5 GHz (5 × 10^9Hz). Calculate its time period. 
+2) A guitar string vibrates with a frequency of 440 Hz. Calculate its time period.
+
+Wavelength Example:
+1) A radio wave has a wavelength of 3 meters. Determine the distance between two consecutive wave crests. 
+2) A microwave has a wavelength of 12 centimetres (cm). Convert this wavelength to meters.
+
+Time Period Example:
+1) A pendulum completes 20 oscillations in 10 seconds. Calculate the time period of the pendulum's motion. 
+2) A satellite in orbit around Earth completes one orbit in 90 minutes. Calculate its frequency.
+
+`;
+
+    const content = document.getElementById('content');
+    content.innerHTML = marked.parse(markdownContent);
+
+    // content.innerHTML = marked(markdownContent);
+  </script>
+</body>
+</html>
