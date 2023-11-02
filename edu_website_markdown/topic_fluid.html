@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Static Webpage</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div id="content">
+    <!-- Content will be loaded here -->
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    const markdownContent = `
+[Back to index](./index.html)
+# Fluid Mechanics
+### *Fluid *
+*A fluid is a substance that deforms continuously under the action of a shearing force, however small the shearing force may be.*
+
+<strong>2 Marks </strong>: 
+
+1) Find the pressure 2000 m below the surface of the ocean if the pressure at the sea level is one atmosphere.[Density of sea water = 1030 kg/m³] 
+
+2) The surface areas of the input and output pistons of a hydraulic lifter are 30 cm2 and 1500 cm2 respectively. A force of 25 N is applied to the input piston. Find the force on the output piston.
+
+3) Calculate the viscous force acting on a raindrop of diameter 1 mm,falling with a uniform velocity of 2 m/s through air. The coefficient of viscosity of air is 1.8 x 10- 5 Ns / (m2)
+
+4) Calculate the work done in blowing a soap bubble of radius 4 cm.The surface tension of the soap solution is 25 x 10-3 N / m
+
+5) Compare the amount of work done in blowing two soap bubbles of radii in the ratio 4: 5.
+
+6) A soap film is formed when a rectangular wire frame of area 2 cm x 2 cm is dipped into a soap solution and taken out. If the area of the film is increased to 3 cm x 3cm , calculate the work done in the process. [Surface tension of the soap film is 3 x 10-2N / m
+
+7) The surface tension of water at 0 °C is 75.5 dyne/cm. Calculate the surface tension of water at 25 °C. [α for water = 2.7 x 10-3/°C]
+
+8) An air bubble of radius 0.2 mm is situated just below the water surface. Calculate the gauge pressure. Surface tension of water = 7.2 x 10-2 N/m.
+
+9) What is the excess pressure inside a soap bubble of radius 3 cm if the surface tension of the soap solution is 30 dyne/cm?
+
+10) Find the pressure difference between the inside and outside of a spherical water drop of radius 2 mm if the surface tension of water is 73 x 10-3 N/m
+
+11) If the surface tension of a liquid is 70 dyne/cm, what is the total energy of the free surface of the liquid drop of radius 0.1 cm?
+
+12) Twenty seven droplets of water, each of radius 1 mm, coalesce into a single drop. Find the change in surface energy. [Surface tension of water is 0.072 N/m]
+
+13) Calculate the rise of water in a clean glass capillary tube of radius 0.1 mm when dipped into water of surface tension 7 x 10-2 N/m. Angle of contact between water and glass = 0o, density of water  is 1000 kg/m³, g = 9.8 m/s²]
+
+14) Calculate the density of paraffin oil, if within a glass capillary tube of radius 0.25 mm dipped into paraffin oil of surface tension 0.0245 N/m, the oil rises to a height of 2 cm. [Angle of contact of paraffin oil with glass = 28°]
+
+15) The tube of a mercury barometer is 1 cm in diameter. What correction due to capillarity is to be applied to the barometric reading if the surface tension of mercury is 485.5 dyn/cm and the angle of contact of mercury with glass is 130°?
+
+16) A water tank has a hole a distance x below the free surface of water in the tank. If the radius of the hole is 2 mm and the velocity of efflux is 11 m/s, find .x.
+
+17) Two vessels A and B are filled with the same gas where the volume, temperature and pressure in vessel A are twice those in vessel B. Calculate the ratio of the number of molecules of the gas in vessel A to that in vessel B.
+
+
+<strong>3 Marks </strong> : 
+
+1) Calculate the total energy per unit mass possessed by water at a point where the pressure is 10 N/m², the velocity is 0.02 m/s and the height of the water level from the ground is 0.1 m. Density of water=1000 kg/m³.
+
+2) A horizontal force of 1 N is required to move a metal plate of area 10-2 m² with a velocity of 2 x 10-2 m/s, when it rests on a layer of oil 1.5 x 103 m thick. Find the coefficient of viscosity of oil. 
+
+3) With what terminal velocity will an air bubble, 0.4 mm in diameter, rise in a liquid of viscosity 0.1 N s/m² and specific gravity (relative density) 0.9? Density of air is 1.29 kg/m³.
+
+4) A drop of mercury of radius 0.2 cm breaks into 8 droplets of the same size. Find the work done if the surface tension of mercury is 485.5 dyne/cm.
+
+5) Twenty seven droplets of water, each of radius 1 mm, coalesce into a single drop. Find the change in surface energy. [Surface tension of water is 0.072 N/m]
+
+6) With what velocity does water start flowing out of an orifice in a tank with initial gauge pressure 4×105 N/m²? [Density of water = 1000 kg/m³]
+
+`;
+
+    const content = document.getElementById('content');
+    content.innerHTML = marked.parse(markdownContent);
+
+    // content.innerHTML = marked(markdownContent);
+  </script>
+</body>
+</html>
