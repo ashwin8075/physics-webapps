@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Static Webpage</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div id="content">
+    <!-- Content will be loaded here -->
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    const markdownContent = `
+[Back to index](./index.html)
+# Kinetic Theory of Gases and Radiation
+![Kinetic Theory of Gases and Radiation]("edu_website_markdown/Kinetic Theory of Gases and Radiation.jpg")
+### *Kinetic Theory of Gases and Radiation *
+**
+
+<strong>2 Marks </strong>: 
+
+1) If the rms speed of oxygen molecules at STP is 460 m/s, determine the rms speed of hydrogen molecules at STP. [Molar mass of oxygen 32 g/mol, molar mass of hydrogen = 2 g/mol]
+
+2) Calculate the rms speed of helium atoms at 127 °C. [Density of helium at NTP = 0.1785 kg/m³]
+
+3) Find the kinetic energy of 5 liters of a gas at STP, given the standard pressure is 1.013 x  105 N / (m2)
+
+4) The kinetic energy of 1 kg of oxygen at 300 K is 1.169 x 105 J. Find the kinetic energy of 2 kg of oxygen at 500 K.
+
+5) What is the kinetic energy per unit volume of the gas if the gas pressure is 105 N/m² ?
+
+6) The difference between the two molar specific heats of a gas 9000 J / kg K If the ratio of the two specific heats is 1.5, calculate the two molar specific heats.
+
+7) A body of surface area 100 cm2 radiates energy 3000 J in 10 minutes at a certain constant temperature. The radiant power of a perfect blackbody maintained at the same temperature is 2500 W/m². Find the radiant power and emissivity of the body.
+
+8) Calculate the energy radiated in half a minute by a blackbody of surface area 200 cm2 when it is maintained at 127 °C. 
+
+9) Calculate the wavelength in ängstrom at which the emissive power is maximum for a blackbody heated to 0.3727 oC.
+
+10) Two vessels A and B are filled with the same gas where the volume temperature and pressure in vessel A are twice those in vessel B. Calculate the ratio of the number of molecules of the gas in vessel A to that in vessel B.
+
+
+<strong>3 Marks </strong> : 
+
+1) A 60 watt electric bulb loses its energy entirely by radiation from the surface of its filament. If the surface area of the filament is 4 cm² and its coefficient of emission is 0.4, calculate the temperature of the filament.
+
+2) Compare the rates of emission of heat by a blackbody maintained at 727 = C and at 227 °C, if the blackbody is surrounded by an enclosure (black) at 27 °C. What would be the ratio of its rates of loss of heat in the two cases? 
+
+3) A small blackened solid copper sphere of radius 2.5 cm and absorption coefficient 0.9 is placed in an evacuated chamber.The temperature of the chamber is maintained at 27 °C. At what rate must energy be supplied to the copper sphere to maintain its temperature at 127 oC ?
+
+
+`;
+
+    const content = document.getElementById('content');
+    content.innerHTML = marked.parse(markdownContent);
+
+    // content.innerHTML = marked(markdownContent);
+  </script>
+</body>
+</html>
