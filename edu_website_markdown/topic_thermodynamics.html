@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Static Webpage</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div id="content">
+    <!-- Content will be loaded here -->
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    const markdownContent = `
+[Back to index](./index.html)
+# Thermodynamics
+![Thermodynamics]("edu_website_markdown/thermodynamics.jpg")
+### * Thermodynamics *
+
+<strong>2 Marks </strong>: 
+
+1) An ideal gas, taken through an isothermal process, does 2000 J of work. Find the heat supplied to the gas.
+
+2) A system releases 125 kJ of heat while 104 kJ of work is done on the system. Calculate the change in the internal energy.
+
+3) Two moles of a gas expand isothermally at 300 K. If the initial volume of the gas is 23 L and the final volume is 46 L, find the work done by the gas on its surroundings. [R = 8.314 J/mol·K.
+
+4) The initial pressure and volume of a gas enclosed in a cylinder are respectively 2 x 105 N/m² and 6 x 10-3 m3 . If the work done in compressing the e gas at constant pressure pressure is 150 J, find the final volume of the gas.
+
+5) A monatomic gas at 27oC is adiabatically compressed to 80% of its initial volume. Find the final temperature of the gas.
+
+6) A gas is adiabatically cooled from 27 °C to -45.6 °C. In the process, the pressure of the gas drops from 100 kPa to 50 kPa. Find the adiabatic ratio for the gas.
+
+7) What is the thermal efficiency of a heat engine if in one cycle the work output is 3000 J and the heat input is 10000 J?
+
+8) In one cycle, from the hot reservoir to the cold reservoir. Calculate the efficiency a heat engine rejects 80% of the energy absorbed.
+
+9) In a refrigerator, in one cycle, the external work done on the working substance is 20% of the energy extracted from the cold reservoir. Find the coefficient of performance of the refrigerator
+
+10) The efficiency of a Carnot cycle/engine is 75%. If the temperature of the hot reservoir is 727 °C, calculate the temperature of the cold reservoir. 
+
+
+<strong>3 Marks </strong> : 
+
+1) 0.5 mole of a gas at a temperature of 450 K expands isothermally from 3L to 9L. (a) What is the work done by the gas? (b) How much heat is supplied to the gas? [R=8.319 J/mol-K]
+
+2) A system is taken through a hypothetical thermodynamic cycle as shown. Calculate the work done along each path.
+
+3) An ideal monatomic gas is adiabatically compressed so that its final temperature is twice its initial temperature. What is the ratio of the final pressure to its initial pressure?
+
+`;
+
+    const content = document.getElementById('content');
+    content.innerHTML = marked.parse(markdownContent);
+
+    // content.innerHTML = marked(markdownContent);
+  </script>
+</body>
+</html>
