@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Static Webpage</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div id="content">
+    <!-- Content will be loaded here -->
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    const markdownContent = `
+[Back to index](./index.html)
+# Projectile motion
+### *Projectile motion *
+<img src="Projectile_motion.jpeg">
+
+<strong>2 Marks </strong>: 
+
+Key Concepts:
+Launch and Trajectory:
+
+Projectile motion begins when an object is thrown, kicked, or otherwise launched into the air.
+The path that the object follows is called its trajectory.
+Components of Motion:
+
+Horizontal Motion:
+Describes the side-to-side movement of the projectile.
+The horizontal motion remains constant unless influenced by external forces (e.g., air resistance).
+Vertical Motion:
+Describes the upward and downward movement of the projectile.
+Affected by gravity, causing the object to accelerate downward.
+Independence of Motions:
+
+The horizontal and vertical motions are independent of each other.
+The horizontal motion is not affected by gravity, while the vertical motion is solely influenced by gravity.
+Gravity's Influence:
+
+Gravity acts vertically downward on the projectile.
+It causes the object to accelerate downward, affecting its vertical velocity and creating a curved trajectory.
+Characteristics of Projectile Motion:
+Range:
+
+The range is the horizontal distance covered by the projectile.
+It depends on the initial speed and launch angle of the object.
+Maximum Height:
+
+The projectile reaches its maximum height during its trajectory.
+The maximum height depends on the initial velocity and launch angle.
+Real-World Examples:
+Sports:
+
+Projectile motion is evident in various sports like soccer, basketball, and baseball.
+For example, when a basketball player shoots a ball into the hoop, the ball follows a projectile motion trajectory.
+Fireworks:
+
+Fireworks display is a spectacular example of projectile motion.
+Fireworks are launched into the air, and their colorful patterns follow intricate projectile paths.
+Projectiles in Nature:
+
+Examples in nature include the motion of seeds ejected from plants or the trajectory of a thrown stone.
+Practical Applications:
+Engineering:
+
+Engineers use the principles of projectile motion when designing and testing objects like missiles, rockets, or even in ballistics.
+Entertainment:
+
+Filmmakers and animators simulate realistic projectile motion to create captivating visual effects in movies and video games.
+
+`;
+
+    const content = document.getElementById('content');
+    content.innerHTML = marked.parse(markdownContent);
+
+    // content.innerHTML = marked(markdownContent);
+  </script>
+</body>
+</html>
